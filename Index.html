@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Download Secure File</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 15%;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #download-btn {
+      padding: 15px 40px;
+      font-size: 18px;
+      background-color: #2e89ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #download-btn:hover {
+      background-color: #1c6ed5;
+    }
+
+    #note {
+      margin-top: 20px;
+      color: #666;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click To Market Xyro Shop</h1>
+  <p>Ingin Topup Game/Membeli Suatu Item</p>
+  <button id="download-btn">⬇️ Click To Here</button>
+  <p id="note">(Kunjungi Situs Xyro Shop)</p>
+
+  <!-- Suara klik -->
+  <audio id="click-sound" src="https://www.myinstants.com/media/sounds/mouse-click.mp3" preload="auto"></audio>
+
+  <script>
+    const button = document.getElementById("download-btn");
+    const note = document.getElementById("note");
+    const clickSound = document.getElementById("click-sound");
+
+    button.onclick = function () {
+      note.textContent = "Preparing download...";
+      clickSound.play();
+
+      setTimeout(() => {
+        // Buka prank di tab baru
+        window.open("ransomware-prank.html", "_blank");
+        note.textContent = "(Your download will start shortly...)";
+      }, 2000);
+    };
+  </script>
+
+</body>
+</html>
